@@ -1,0 +1,1770 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.11.18 11:19:46 =~=~=~=~=~=~=~=~=~=~=~=
+[00.078] [UEFI] E006 PrePiStart
+Cix UEFI firmware (version 0.0.1 built at 11:12:42 on Nov 18 2026)
+[00.261] [UEFI] E007 PrePiEnd
+[Patina INFO] DXE Core Platform Binary Entry
+[Patina INFO] DXE Core Crate v21.0.3
+[Patina INFO] memory_start: 0x7f8000000
+[Patina INFO] memory_size: 0x8000000
+[Patina INFO] free_memory_start: 0x7f8001000
+[Patina INFO] free_memory_size: 0x66e6000
+[Patina INFO] physical_hob_list: 0x7f8000000
+[Patina INFO] free_memory_attributes: 0x8
+[Patina INFO] free_memory_capabilities: 0xe
+[Patina INFO] Mapping memory range 0x80000000..0x82500000 as SystemMemory with attributes 0x6002
+[Patina INFO] Mapping memory range 0x82500000..0x84400000 as SystemMemory with attributes 0x6002
+[Patina INFO] Mapping memory range 0x84400000..0x845f0000 as SystemMemory with attributes 0x6008
+[Patina INFO] Mapping memory range 0x84800000..0x85000000 as Reserved with attributes 0x4002
+[Patina INFO] Mapping memory range 0x85000000..0x7f8001000 as SystemMemory with attributes 0x6008
+[Patina INFO] Mapping memory range 0x7fe6e7000..0x800000000 as SystemMemory with attributes 0x6008
+[Patina INFO] Mapping memory range 0x8000000000..0x8080000000 as SystemMemory with attributes 0x6008
+[Patina INFO] Mapping memory range 0x1000..0x80000000 as MemoryMappedIo with attributes 0x4001
+[Patina INFO] Mapping memory range 0x800000000..0x8000000000 as MemoryMappedIo with attributes 0x4001
+[Patina INFO] Skipping FV HOB at 0x84400000 of length 0x1f0000. Containing region is not MMIO.
+[Patina INFO] Skipping FV HOB at 0x7fe7b6000 of length 0xbf0280. Containing region is not MMIO.
+[Patina INFO] Skipping FV HOB at 0x7fe7b6000 of length 0xbf0280. Containing region is not MMIO.
+[Patina INFO] Page 0 is not part of system memory, it cannot be allocated. It will still be unmapped to use for null pointer detection.
+[Patina INFO] Allocating memory bucket for memory type: 0x9, 0x50 pages.
+[Patina INFO] Allocating memory bucket for memory type: 0x6, 0x1000 pages.
+[Patina INFO] Allocating memory bucket for memory type: 0x5, 0x4b0 pages.
+[Patina INFO] Allocating memory bucket for memory type: 0x3, 0x7d0 pages.
+[Patina INFO] Allocating memory bucket for memory type: 0x4, 0x4650 pages.
+[Patina INFO] Allocating memory bucket for memory type: 0x1, 0x1000 pages.
+[Patina INFO] GCD - After memory init:
+
+GCDMemType Range                             Capabilities     Attributes       ImageHandle      DeviceHandle
+========== ================================= ================ ================ ================ ================
+NonExist   0000000000000000-0000000000000fff 0000000000000000 0000000000000000 0x00000000000000 0x00000000000000
+MMIO       0000000000001000-000000007fffffff 8700000000026001 0000000000004001 0x00000000000000 0x00000000000000
+SystemMem  0000000080000000-00000000824fffff 800000000002600e 0000000000004002 0x00000000000002 0x00000000000000
+SystemMem  0000000082500000-00000000843fffff 800000000002600e 0000000000004002 0x00000000000008 0x00000000000000
+SystemMem  0000000084400000-00000000845effff 800000000002600e 0000000000004008 0x00000000000006 0x00000000000000
+NonExist   00000000845f0000-00000000847fffff 0000000000000000 0000000000000000 0x00000000000000 0x00000000000000
+Reserved   0000000084800000-0000000084ffffff 8700000000026002 0000000000004002 0x00000000000001 0x00000000000000
+SystemMem  0000000085000000-0000000085efffff 800000000002600e 0000000000006008 0x00000000000000 0x00000000000000
+SystemMem  0000000085f00000-0000000085ffffff 800000000002600e 0000000000004008 0x00000000000008 0x00000000000000
+SystemMem  0000000086000000-00000000bcdfffff 800000000002600e 0000000000006008 0x00000000000000 0x00000000000000
+SystemMem  00000000bce00000-00000000bddfffff 800000000002600e 0000000000004008 0x00000000000002 0x00000000000000
+SystemMem  00000000bde00000-00000000cddfffff 800000000002600e 0000000000006008 0x00000000000000 0x00000000000000
+SystemMem  00000000cde00000-00000000d0ffffff 800000000002600e 0000000000004008 0x00000000000002 0x00000000000000
+SystemMem  00000000d1000000-00000007f8000fff 800000000002600e 0000000000006008 0x00000000000000 0x00000000000000
+SystemMem  00000007f8001000-00000007f8060fff 800000000002600e 0000000000004008 0x00000000000006 0x00000000000000
+SystemMem  00000007f8061000-00000007fe5e6fff 800000000002600e 0000000000006008 0x00000000000000 0x00000000000000
+SystemMem  00000007fe5e7000-00000007fe6e6fff 800000000002600e 0000000000004008 0x00000000000006 0x00000000000000
+SystemMem  00000007fe6e7000-00000007fe7b5fff 800000000002600e 0000000000004008 0x00000000000005 0x00000000000000
+SystemMem  00000007fe7b6000-00000007ffffffff 800000000002600e 0000000000004008 0x00000000000006 0x00000000000000
+MMIO       0000000800000000-0000007fffffffff 8700000000026001 0000000000004001 0x00000000000000 0x00000000000000
+SystemMem  0000008000000000-0000008078cdffff 800000000002600e 0000000000006008 0x00000000000000 0x00000000000000
+SystemMem  0000008078ce0000-0000008079cdffff 800000000002600e 0000000000006008 0x00000000000003 0x00000000000000
+SystemMem  0000008079ce0000-000000807e32ffff 800000000002600e 0000000000006008 0x00000000000006 0x00000000000000
+SystemMem  000000807e330000-000000807eafffff 800000000002600e 0000000000006008 0x00000000000005 0x00000000000000
+SystemMem  000000807eb00000-000000807efaffff 800000000002600e 0000000000006008 0x00000000000007 0x00000000000000
+SystemMem  000000807efb0000-000000807ffaffff 800000000002600e 0000000000006008 0x00000000000008 0x00000000000000
+SystemMem  000000807ffb0000-000000807fffffff 800000000002600e 0000000000006008 0x00000000000009 0x00000000000000
+NonExist   0000008080000000-000000ffffffffff 0000000000000000 0000000000000000 0x00000000000000 0x00000000000000
+
+
+GCDIoType  Range                            
+========== =================================
+
+
+[Patina INFO] Registering platform components
+[Patina INFO] Finished.
+[Patina INFO] Registering default components
+[Patina INFO] Finished.
+[Patina INFO] Initializing System Table
+[Patina INFO] Initializing paging for the GCD
+[Patina INFO] Splitting large page at VA VirtualAddress(
+    0x7FFFB5000,
+) at level Level2 pt entry address: 0x807E325FF8
+[Patina INFO] Installing page table. TTBR0: 0x85000000 TCR: 0x80823510 MAIR: 0xffbb4400
+[Patina INFO] Paging initialized for the GCD
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x00000007fe5ecd80
+[Patina INFO] Finished.
+[Patina INFO] Parsing HOB list for Guided HOBs.
+[Patina WARN] No parser registered for HOB: GuidHob { Hob { type: 4, length: 104, reserved: 0 }, name: Guid { 4c19049f-4137-4dd3-9c10-8b97a83ffdfa } }
+[Patina WARN] No parser registered for HOB: GuidHob { Hob { type: 4, length: 504, reserved: 0 }, name: Guid { a4ee0728-e5d7-4ac5-b21e-658ed857e834 } }
+[Patina WARN] No parser registered for HOB: GuidHob { Hob { type: 4, length: 32, reserved: 0 }, name: Guid { c095791a-3001-47b2-80c9-eac7319f2fa4 } }
+[Patina WARN] No parser registered for HOB: GuidHob { Hob { type: 4, length: 56, reserved: 0 }, name: Guid { 385a982c-2f49-4043-a51e-4901025c8b6b } }
+[Patina INFO] Finished.
+[Patina INFO] Installing Firmware Volumes from HOB list.
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x00000007fe5f0c80
+[Patina INFO] InstallProtocolInterface: 8F644FA9-E850-4DB1-9CE2-0B44698E8DA4 @ 0x00000007fe5f0ac0
+[Patina INFO] InstallProtocolInterface: 220E73B6-6BDB-4413-8405-B974B108619A @ 0x00000007fe5f1c00
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x00000007fe5f0ca0
+[Patina INFO] InstallProtocolInterface: 8F644FA9-E850-4DB1-9CE2-0B44698E8DA4 @ 0x00000007fe5f0cc0
+[Patina INFO] InstallProtocolInterface: 220E73B6-6BDB-4413-8405-B974B108619A @ 0x00000007fe5f1d00
+[Patina INFO] Finished.
+[Patina INFO] Dispatching Drivers
+[Patina INFO] Dispatching patina_dxe_core::cpu::hw_interrupt_protocol::HwInterruptProtocolInstaller
+[Patina INFO] GIC initializing (e010000, e090000)
+[Patina INFO] Total Redistributors: 12, Current CPU Redistributor Index: 10
+[Patina INFO] GIC initialized
+[Patina INFO] InstallProtocolInterface: 2890B3EA-053D-1643-AD0C-D64808DA3FF1 @ 0x000000807b366a00
+[Patina INFO] InstallProtocolInterface: 32898322-2DA1-474A-BAAA-F3F7CF569470 @ 0x000000807b366a40
+[Patina INFO] installed HARDWARE_INTERRUPT_PROTOCOL_V2
+[Patina INFO] Dispatching patina_dxe_core::cpu::cpu_arch_protocol::CpuArchProtocolInstaller
+[Patina INFO] InstallProtocolInterface: 26BACCB1-6F42-11D4-BCE7-0080C73C8881 @ 0x000000807b366a80
+[Patina INFO] installed EFI_CPU_ARCH_PROTOCOL_GUID
+[Patina INFO] Dispatching patina_dxe_core::systemtables::SystemTableChecksumInstaller
+[Patina INFO] Dispatching patina_dxe_core::decompress::DecompressProtocolInstaller
+[Patina INFO] InstallProtocolInterface: D8117CFE-94A6-11D4-9A3A-0090273FC14D @ 0x00000007fe5f0ab0
+[Patina INFO] Depex evaluation complete, scheduled 17 drivers
+[Patina INFO] Loading file: 80CF7257-87AB-47F9-A3FE-D50B76D89541
+[Patina INFO] Applying image memory protections on 0x807EAFB000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAFE000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAFF000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x00000007fe5ec500
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b391240
+[Patina INFO] Loaded image at 0x000000807eafa000 Size=0x6000 EntryPoint=0x807eafd35c PcdDxe.efi
+[Patina INFO] InstallProtocolInterface: 11B34006-D85B-4D0A-A290-D5A571310EF7 @ 0x000000807eafe190
+[Patina INFO] InstallProtocolInterface: 13A3F0F6-264A-3EF0-F2E0-DEC512342F34 @ 0x000000807eafe0d0
+[Patina INFO] InstallProtocolInterface: 5BE40F57-FA68-4610-BBBF-E9C5FCDAD365 @ 0x000000807eafe160
+[Patina INFO] InstallProtocolInterface: FD0F4478-0EFD-461D-BA2D-E58C45FD5F5E @ 0x000000807eafe0c0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: B601F8C4-43B7-4784-95B1-F4226CB40CEE
+[Patina INFO] Applying image memory protections on 0x807EF70000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EF80000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EF90000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807de56380
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b3a3080
+[Patina INFO] Loaded image at 0x000000807ef60000 Size=0x40000 EntryPoint=0x807ef70734 RuntimeDxe.efi
+[Patina INFO] InstallProtocolInterface: B7DFB4E1-052F-449F-87BE-9818FC91B733 @ 0x000000807ef80040
+[Patina INFO] Runtime protocol installed. Setting up pointers.
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9585984C-F027-45E9-AFDF-ADAA6DFAAAC7
+[Patina INFO] Applying image memory protections on 0x807EAF5000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAF8000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAF9000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b360300
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b367d80
+[Patina INFO] Loaded image at 0x000000807eaf4000 Size=0x6000 EntryPoint=0x807eaf6b6c ArmScmiDxe.efi
+[Patina INFO] InstallProtocolInterface: D7E5ABE9-33AB-418E-9F91-72DAE2BA8E2F @ 0x000000807eaf71d8
+[Patina INFO] InstallProtocolInterface: 09B8BA84-3DD3-49A6-A05A-3134A5F07BAD @ 0x000000807eaf7208
+[Patina INFO] InstallProtocolInterface: 91CE67A8-E0AA-4012-B99F-B6FCF3048EAA @ 0x000000807eaf7288
+[Patina INFO] InstallProtocolInterface: B8D8CAF2-9E94-462C-A834-6C99FC05EFCF @ 0x000000807eaf7248
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 7A98E3A1-8EF2-19BB-EE53-4A5F56D0D964
+[Patina INFO] Applying image memory protections on 0x807EAEF000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAF2000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAF3000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b360c00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b368440
+[Patina INFO] Loaded image at 0x000000807eaee000 Size=0x6000 EntryPoint=0x807eaf0a88 PowerDxe.efi
+[Patina INFO] InstallProtocolInterface: FFD63551-9B97-AADE-7616-53129C7F645A @ 0x000000807eaf1740
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: B710F783-3329-4A82-976D-E9A8B040202D
+[Patina INFO] Applying image memory protections on 0x807EAE9000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAEC000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAED000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b360c80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b368480
+[Patina INFO] Loaded image at 0x000000807eae8000 Size=0x6000 EntryPoint=0x807eaea8f8 ClockDxe.efi
+[Patina INFO] InstallProtocolInterface: 9DFDA0F8-EC28-6452-9EAC-BB082655D884 @ 0x000000807eaec000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 1A9B022B-7686-798A-30A4-947ACA7D42D6
+[Patina INFO] Applying image memory protections on 0x807EAE3000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAE6000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAE7000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b360d80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b367040
+[Patina INFO] Loaded image at 0x000000807eae2000 Size=0x6000 EntryPoint=0x807eae4324 ResetDxe.efi
+[Patina INFO] InstallProtocolInterface: 1E5069D3-36B4-9DEB-1BE2-D4650ED41A26 @ 0x000000807eae6018
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 2E3FC9CC-9606-4279-BF3D-84183F298C0F
+[Patina INFO] Applying image memory protections on 0x807EADD000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAE0000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAE1000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b360e00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b3687c0
+[Patina INFO] Loaded image at 0x000000807eadc000 Size=0x6000 EntryPoint=0x807eade7f0 S3SaveStateDxe.efi
+[Patina INFO] InstallProtocolInterface: E5FAF065-1F34-46A4-80C5-FF66EB2B6AA1 @ 0x000000807eae0028
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: A4A011DA-89F9-462A-2806-2375CDD35609
+[Patina INFO] Applying image memory protections on 0x807EAD6000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EADA000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EADB000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b360f00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b369240
+[Patina INFO] Loaded image at 0x000000807ead5000 Size=0x7000 EntryPoint=0x807ead7d64 SocDxe.efi
+[Patina INFO] InstallProtocolInterface: 222A6C1A-51EE-0EEC-9E7C-F3FD6F0FD7CF @ 0x000000807eada000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 09EE81D3-F15E-43F4-85B4-CB9873DA5D6B
+[Patina INFO] Applying image memory protections on 0x807EF20000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EF30000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EF40000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b360f80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b36a440
+[Patina INFO] Loaded image at 0x000000807ef10000 Size=0x40000 EntryPoint=0x807ef22cb4 ArmMmCommunication.efi
+[Patina INFO] InstallProtocolInterface: ED32D533-99E6-4209-9CC0-2D72CDD998A7 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 93BA1826-DFFB-45DD-82A7-E7DCAA3BBDF3 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 378DAEDC-F06B-4446-8314-40AB933C87A3 @ 0x000000807ef300f8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: A40F512E-7450-4CC6-99DB-ACC074EC5010
+[Patina INFO] Applying image memory protections on 0x807EED0000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EEE0000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EEF0000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361180
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b36a5c0
+[Patina INFO] Loaded image at 0x000000807eec0000 Size=0x40000 EntryPoint=0x807eed21e8 NorFlashStmmRuntimeDxe.efi
+[13.348] [UEFI] E3C1 XspiInitDxeStart
+[Patina INFO] InstallProtocolInterface: D1A86E3F-0707-4C35-83CD-DC2C29C891A3 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ffa18b8
+[Patina INFO] InstallProtocolInterface: 8A22261F-FCE3-4FB7-8240-4F64FA685E70 @ 0x000000807ffa1870
+[Patina INFO] InstallProtocolInterface: CE345171-BA0B-11D2-8E4F-00A0C969723B @ 0x000000807ffa18a0
+[Patina INFO] InstallProtocolInterface: 8F644FA9-E850-4DB1-9CE2-0B44698E8DA4 @ 0x000000807ffa1908
+[Patina INFO] InstallProtocolInterface: 0B25D2AF-335B-4B04-9537-1BCF164D33BE @ 0x000000807ffa18d1
+[Patina ERROR] Failed to get physical address for fvb handle 0x5ab0fdb667dfcf24. Error: Status(
+    0x8000000000000003,
+)
+[13.415] [UEFI] E400 XspiInitDxeEnd
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9F7DCADE-11EA-448A-A46F-76E003657DD1
+[Patina INFO] Applying image memory protections on 0x807EE80000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EE90000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EEA0000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361200
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b36c140
+[Patina INFO] Loaded image at 0x000000807ee70000 Size=0x40000 EntryPoint=0x807ee81cb8 VariableSmmRuntimeDxe.efi
+[Patina INFO] InstallProtocolInterface: 1E5668E2-8481-11D4-BCF1-0080C73C8881 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: CD3D0A05-9E24-437C-A891-1EE053DB7638 @ 0x000000807ee90208
+[Patina INFO] InstallProtocolInterface: AF23B340-97B4-4685-8D4F-A3F28169B21D @ 0x000000807ee901d0
+[Patina INFO] InstallProtocolInterface: 6441F818-6362-4E44-B570-7DBA31DD2453 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 81D1675C-86F6-48DF-BD95-9A6E4F0925C3 @ 0x000000807ee90210
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 49EA041E-6752-42CA-B0B1-7344FE2546B7
+[Patina INFO] Applying image memory protections on 0x807EAD2000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAD3000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAD4000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361300
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b36e400
+[Patina INFO] Loaded image at 0x000000807ead1000 Size=0x4000 EntryPoint=0x807ead2350 ArmTimerDxe.efi
+[Patina INFO] InstallProtocolInterface: 26BACCB3-6F42-11D4-BCE7-0080C73C8881 @ 0x000000807ead3020
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 0619F5C2-4858-4CAA-A86A-73A21A18DF6B
+[Patina INFO] Applying image memory protections on 0x807EACE000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EACF000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAD0000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361380
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b36d9c0
+[Patina INFO] Loaded image at 0x000000807eacd000 Size=0x4000 EntryPoint=0x807eace2f8 GenericWatchdogDxe.efi
+[Patina INFO] InstallProtocolInterface: 665E3FF5-46CC-11D4-9A38-0090273FC14D @ 0x000000807eacf020
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 346E31BC-C80C-49D7-9D27-A10CC21A00D6
+[Patina INFO] Applying image memory protections on 0x807EAC3000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAC8000 for len 0x4000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EACC000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361400
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b36fdc0
+[Patina INFO] Loaded image at 0x000000807eac2000 Size=0xb000 EntryPoint=0x807eac51f0 PlatformConfigParamsManageDxe.efi
+[13.747] [UEFI] E119 PlatformConfigParamsManageDxeStart
+[Patina INFO] InstallProtocolInterface: C8723B5F-2550-498E-B11F-4D05258C3157 @ 0x000000807b36ff98
+[13.765] [UEFI] E11A PlatformConfigParamsManageDxeEnd
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 8BA8F66D-B32A-4048-8325-8CC0A171C4E6
+[Patina INFO] Applying image memory protections on 0x807EAA1000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EAA4000 for len 0x1D000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EAC1000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361500
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b3716c0
+[Patina INFO] Loaded image at 0x000000807eaa0000 Size=0x22000 EntryPoint=0x807eaa2a20 ConfigParamsManageDxe.efi
+[13.837] [UEFI] E117 ConfigParamsManageDxeStart
+[Patina INFO] InstallProtocolInterface: C86EADA7-D376-474A-9FAC-CC4FC5FD417B @ 0x000000807b371d18
+[13.850] [UEFI] E118 ConfigParamsManageDxeEnd
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 4C7FCED5-9CD6-4F33-AD33-A2EC35DFDE71
+[Patina INFO] Applying image memory protections on 0x807EA9A000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EA9D000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EA9F000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361580
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b371f00
+[Patina INFO] Loaded image at 0x000000807ea99000 Size=0x7000 EntryPoint=0x807ea9b870 PlatformSetupVariableInitDxe.efi
+[Patina INFO] InstallProtocolInterface: 97BBCAC1-13CB-4B4C-B0F8-A3085DBF1CD6 @ 0x000000807b372818
+[Patina INFO] InstallProtocolInterface: 3638A3B3-60E6-4F76-B1AC-479DCDC6F88D @ 0x0000000000000000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9804231A-EA80-EDB1-29C3-3D24A0EAD998
+[Patina INFO] Applying image memory protections on 0x807EA90000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EA96000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EA98000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361680
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b372b00
+[Patina INFO] Loaded image at 0x000000807ea8f000 Size=0xa000 EntryPoint=0x807ea92510 PlatformDxe.efi
+[14.006] [UEFI] E115 PlatformDxeStart
+[Patina INFO] InstallProtocolInterface: 00964A41-71FF-49A0-AEA1-2163FDF54121 @ 0x000000807ea97288
+Farm Function Disable.
+[FarmFunctionControl] [642]Get Farm Enable Flag Variable StatusNot Found.
+[Patina INFO] InstallProtocolInterface: 63DAB70D-F5DB-4402-BB3A-36D0DA02A756 @ 0x0000000000000000
+[14.079] [UEFI] E116 PlatformDxeEnd
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Depex evaluation complete, scheduled 44 drivers
+[Patina INFO] Loading file: A74306CD-B65F-F936-7B5D-098350D717FA
+[Patina INFO] Applying image memory protections on 0x807EA8A000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EA8D000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EA8E000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b362f00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b373c40
+[Patina INFO] Loaded image at 0x000000807ea89000 Size=0x6000 EntryPoint=0x807ea8c010 FwVersionDxe.efi
+[Patina INFO] InstallProtocolInterface: E1574F13-5014-41CA-2459-FF15CB0ADE33 @ 0x000000807ea8d000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: F80697E9-7FD6-4665-8646-88E33EF71DFC
+[Patina INFO] Applying image memory protections on 0x807EA13000 for len 0x71000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EA84000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EA86000 for len 0x3000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x00000007fe5f2800
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807b373c80
+[Patina INFO] Loaded image at 0x000000807ea12000 Size=0x77000 EntryPoint=0x807ea142b0 SecurityStubDxe.efi
+[Patina INFO] InstallProtocolInterface: 94AB2F58-1438-4EF1-9152-18941A3A0E68 @ 0x000000807ea84220
+[Patina INFO] InstallProtocolInterface: A46423E3-4617-49F1-B9FF-D1BFA9115839 @ 0x000000807ea84228
+[Patina INFO] InstallProtocolInterface: 15853D7C-3DDF-43E0-A1CB-EBF85B8F872C @ 0x000000807ea841e8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 1E97605F-9DF2-4DE0-BCE9-7ADAEFE09345
+[Patina INFO] Applying image memory protections on 0x807EA0D000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EA10000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EA11000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b362f80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a777e40
+[Patina INFO] Loaded image at 0x000000807ea0c000 Size=0x6000 EntryPoint=0x807ea0e334 RngDxe.efi
+[Patina INFO] InstallProtocolInterface: 3152BCA5-EADE-433D-862E-C01CDC291F44 @ 0x000000807ea10048
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 42857F0A-13F2-4B21-8A23-53D3F714B840
+[Patina INFO] Applying image memory protections on 0x807EE40000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EE50000 for len 0x10000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a777f80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a777e80
+[Patina INFO] Loaded image at 0x000000807ee30000 Size=0x30000 EntryPoint=0x807ee40438 CapsuleRuntimeDxe.efi
+[Patina INFO] InstallProtocolInterface: 5053697E-2CBC-4819-90D9-0580DEEE5754 @ 0x0000000000000000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 82A80854-4DEF-0548-E746-8BC8763CE13F
+[Patina INFO] Applying image memory protections on 0x807EE00000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EE10000 for len 0x10000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a78c580
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a78c540
+[Patina INFO] Loaded image at 0x000000807edf0000 Size=0x30000 EntryPoint=0x807ee02328 TypecPhyDxe.efi
+[Patina INFO] InstallProtocolInterface: AFC9EECB-C5F1-3EDE-A61F-284F38E27832 @ 0x000000807a770f28
+[Patina INFO] InstallProtocolInterface: AFC9EECB-C5F1-3EDE-A61F-284F38E27832 @ 0x000000807a78d828
+[Patina INFO] InstallProtocolInterface: AFC9EECB-C5F1-3EDE-A61F-284F38E27832 @ 0x000000807a78d928
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 40439E4D-F09C-D6F0-29AB-54A24A5DE887
+[Patina INFO] Applying image memory protections on 0x807EDB0000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EDC0000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EDD0000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363280
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a78c500
+[Patina INFO] Loaded image at 0x000000807eda0000 Size=0x40000 EntryPoint=0x807edb7f88 CdnspDxe.efi
+[Patina INFO] InstallProtocolInterface: AFB1216E-988C-49C0-87B3-808342593F64 @ 0x000000807a78f028
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 65651878-C382-4CE2-851A-EA1CD107E52E
+[Patina INFO] Applying image memory protections on 0x807EA06000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EA0A000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EA0B000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363380
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a78e840
+[Patina INFO] Loaded image at 0x000000807ea05000 Size=0x7000 EntryPoint=0x807ea07a08 UsbDeviceControlDxe.efi
+[Patina INFO] InstallProtocolInterface: 0AB19FF5-8CC0-467C-94C9-92536A8D08F2 @ 0x000000807ea0a330
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 079E40BF-CF67-1FD4-9D82-0A9066E94D54
+[Patina INFO] Applying image memory protections on 0x807EA00000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EA04000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a78ee00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a78ee80
+[Patina INFO] Loaded image at 0x000000807e9ff000 Size=0x6000 EntryPoint=0x807ea021e4 LaunchFastbootDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 0D44EEBC-AB62-4B2A-935C-7C3A5CACFEBF
+[Patina INFO] Applying image memory protections on 0x807E9F9000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E9FD000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E9FE000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363500
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a78ef40
+[Patina INFO] Loaded image at 0x000000807e9f8000 Size=0x7000 EntryPoint=0x807e9fb6b4 UsbCHostDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 0B593D3F-B6FF-495E-BB8B-DA15A63D9C4E
+[Patina INFO] Applying image memory protections on 0x807E9F2000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E9F6000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E9F7000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361780
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a793200
+[Patina INFO] Loaded image at 0x000000807e9f1000 Size=0x7000 EntryPoint=0x807e9f44c4 Usb32HostDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 7B93FA36-68B2-49D8-A5FB-30542C691EB3
+[Patina INFO] Applying image memory protections on 0x807E9EB000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E9EF000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E9F0000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361800
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a793c00
+[Patina INFO] Loaded image at 0x000000807e9ea000 Size=0x7000 EntryPoint=0x807e9ed3dc Usb20HostDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 805337AD-1C86-49E5-B8FC-4147A2076562
+[Patina INFO] Applying image memory protections on 0x807E9DE000 for len 0x8000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E9E6000 for len 0x3000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E9E9000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361900
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a793e40
+[Patina INFO] Loaded image at 0x000000807e9dd000 Size=0xd000 EntryPoint=0x807e9e0a0c PcieInitDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: C937FCB7-25AC-4376-89A2-4EA8B317DE83
+[Patina INFO] Applying image memory protections on 0x807E98A000 for len 0x4F000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E9D9000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E9DA000 for len 0x3000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361980
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7958c0
+[Patina INFO] Loaded image at 0x000000807e989000 Size=0x54000 EntryPoint=0x807e98f594 SecureBootDefaultKeysDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: D1FED3CC-E80C-4B78-94F8-72DDA5B396E5
+[Patina INFO] Applying image memory protections on 0x807E986000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E988000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a7e2880
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e2d80
+[Patina INFO] Loaded image at 0x000000807e985000 Size=0x4000 EntryPoint=0x807e9870f0 SecureBootDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: AD608272-D07F-4964-801E-7BD3B7888652
+[Patina INFO] Applying image memory protections on 0x807ED70000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807ED80000 for len 0x10000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a7e2980
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3000
+[Patina INFO] Loaded image at 0x000000807ed60000 Size=0x30000 EntryPoint=0x807ed702c0 MonotonicCounterRuntimeDxe.efi
+[Patina INFO] InstallProtocolInterface: 1DA97072-BDDC-4B30-99F1-72A0B56FFF2A @ 0x0000000000000000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 16036A73-E8EF-46D0-953C-9B8E96527D13
+[Patina INFO] Applying image memory protections on 0x807ED30000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807ED40000 for len 0x10000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a7e2d00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e2840
+[Patina INFO] Loaded image at 0x000000807ed20000 Size=0x30000 EntryPoint=0x807ed31d08 Reset.efi
+[Patina INFO] InstallProtocolInterface: 27CFAC88-46CC-11D4-9A38-0090273FC14D @ 0x0000000000000000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 4C6E0267-C77D-410D-8100-1495911A989D
+[Patina INFO] Applying image memory protections on 0x807E982000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E983000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E984000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361b80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4b80
+[Patina INFO] Loaded image at 0x000000807e981000 Size=0x4000 EntryPoint=0x807e98216c MetronomeDxe.efi
+[Patina INFO] InstallProtocolInterface: 26BACCB2-6F42-11D4-BCE7-0080C73C8881 @ 0x000000807e983010
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 348C4D62-BFBD-4882-9ECE-C80BB1C4783B
+[Patina INFO] Applying image memory protections on 0x807E96C000 for len 0x13000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E97F000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E980000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361c80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e31c0
+[Patina INFO] Loaded image at 0x000000807e96b000 Size=0x16000 EntryPoint=0x807e96ec20 HiiDatabase.efi
+[Patina INFO] InstallProtocolInterface: E9CA4775-8657-47FC-97E7-7ED65A084324 @ 0x000000807e97f1a8
+[Patina INFO] InstallProtocolInterface: 0FD96974-23AA-4CDC-B9CB-98D17750322A @ 0x000000807e97f220
+[Patina INFO] InstallProtocolInterface: EF9FC172-A1B2-4693-B327-6D32FC416042 @ 0x000000807e97f248
+[Patina INFO] InstallProtocolInterface: 587E72D7-CC50-4F79-8209-CA291FC1A10F @ 0x000000807e97f2a0
+[Patina INFO] InstallProtocolInterface: 0A8BADD5-03B8-4D19-B128-7B8F0EDAA596 @ 0x000000807e97f2d0
+[Patina INFO] InstallProtocolInterface: 31A6406A-6BDF-4E46-B2A2-EBAA89C40920 @ 0x000000807e97f1c8
+[Patina INFO] InstallProtocolInterface: 1A1241E6-8F19-41A9-BC0E-E8EF39E06546 @ 0x000000807e97f1f0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9A5163E7-5C29-453F-825C-837A46A81E15
+[Patina INFO] Applying image memory protections on 0x807E968000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E969000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E96A000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b361a80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e2dc0
+[Patina INFO] Loaded image at 0x000000807e967000 Size=0x4000 EntryPoint=0x807e9687fc SerialDxe.efi
+[Patina INFO] InstallProtocolInterface: BB25CF6F-F1D4-11D2-9A0C-0090273FC1FD @ 0x000000807e969070
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e969020
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 55E0FA57-571D-6103-A9CD-32438D01AC71
+[Patina INFO] Applying image memory protections on 0x807E961000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E965000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E966000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b362080
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3740
+[Patina INFO] Loaded image at 0x000000807e960000 Size=0x7000 EntryPoint=0x807e962758 PowerButtonDxe.efi
+[Patina INFO] InstallProtocolInterface: 3CBB5523-1A97-4032-A6B9-F5B31B7AF9EF @ 0x000000807e965000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 13AC6DD0-73D0-11D4-B06B-00AA00BD6DE7
+[Patina INFO] Applying image memory protections on 0x807E95A000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E95E000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E95F000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b362580
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4a00
+[Patina INFO] Loaded image at 0x000000807e959000 Size=0x7000 EntryPoint=0x807e95d344 EbcDxe.efi
+[Patina INFO] InstallProtocolInterface: 13AC6DD1-73D0-11D4-B06B-00AA00BD6DE7 @ 0x000000807a7e3518
+[Patina INFO] InstallProtocolInterface: 96F46153-97A7-4793-ACC1-FA19BF78EA97 @ 0x000000807e95e058
+[Patina INFO] InstallProtocolInterface: 2755590C-6F3C-42FA-9EA4-A3BA543CDA25 @ 0x000000807a7e3218
+[Patina INFO] InstallProtocolInterface: AAEACCFD-F27B-4C17-B610-75CA1F2DFB52 @ 0x000000807b36c058
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 6D5E4989-3AEE-4B1F-9844-4F0A76D45B4D
+[Patina INFO] Applying image memory protections on 0x807ECE0000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807ECF0000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807ED00000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b362480
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3580
+[Patina INFO] Loaded image at 0x000000807ecd0000 Size=0x40000 EntryPoint=0x807ece18e0 I2cDxe.efi
+[16.473] [UEFI] E201 I2cInitDxeStart
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807ff95560
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ff95580
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807ff95660
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ff95680
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807ff95760
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ff95780
+[Patina INFO] InstallProtocolInterface: 907D8B8B-5C4D-422E-AF93-CDE0814C3725 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807ff95860
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ff95880
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807ff95960
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ff95980
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807ff95a60
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ff95a80
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807ff95b60
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ff95b80
+[16.609] [UEFI] E240 I2cInitDxeEnd
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 4E60AF09-2861-4BC9-9DC8-249642F43568
+[Patina INFO] Applying image memory protections on 0x807ECA0000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807ECB0000 for len 0x10000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a7e3680
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3700
+[Patina INFO] Loaded image at 0x000000807ec90000 Size=0x30000 EntryPoint=0x807eca21d4 I2cHidDeviceDxe.efi
+[Patina INFO] InstallProtocolInterface: CD72881F-45B5-4FEB-98C8-313DA8117462 @ 0x000000807a7e3d42
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807a7e3c98
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 4A7306C0-0EA8-463B-8CA5-17E82F937E1D
+[Patina INFO] Applying image memory protections on 0x807E954000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E957000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E958000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b362a80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e2b00
+[Patina INFO] Loaded image at 0x000000807e953000 Size=0x6000 EntryPoint=0x807e9555e4 SpiDxe.efi
+[16.752] [UEFI] E241 SpiInitDxeStart
+[Patina INFO] InstallProtocolInterface: 79C83D2B-8CE1-4DD3-AE24-4BD2D87236B1 @ 0x000000807a815728
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807a815750
+[16.773] [UEFI] E280 SpiInitDxeEnd
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 2FF1885B-51E2-39F4-BF58-C47E4D55A7E9
+[Patina INFO] Applying image memory protections on 0x807E946000 for len 0xB000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E951000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E952000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363700
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e5bc0
+[Patina INFO] Loaded image at 0x000000807e945000 Size=0xe000 EntryPoint=0x807e94c718 DpuDxe.efi
+[Patina INFO] InstallProtocolInterface: B773037A-76E5-4016-9F60-A304571C7476 @ 0x000000807e9510a8
+[Patina INFO] InstallProtocolInterface: B9B02EF7-4588-4FB9-91D3-A02005B3D228 @ 0x000000807e9511c0
+[Patina INFO] InstallProtocolInterface: B9B02EF7-4588-4FB9-91D3-A02005B3D228 @ 0x000000807e951218
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9622E42C-8E38-4A08-9E8F-54F784652F6B
+[Patina INFO] Applying image memory protections on 0x807E93F000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E942000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E944000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363780
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e33c0
+[Patina INFO] Loaded image at 0x000000807e93e000 Size=0x7000 EntryPoint=0x807e94182c AcpiTableDxe.efi
+[Patina INFO] InstallProtocolInterface: FFE06BDD-6107-46A6-7BB2-5A9C7EC5275C @ 0x000000807a8232a0
+[Patina INFO] InstallProtocolInterface: EB97088E-CFDF-49C6-BE4B-D906A5B20E86 @ 0x000000807a8232b0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: D021A013-70EC-4B0D-9FBF-6BD1E245152D
+[Patina INFO] Applying image memory protections on 0x807E937000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E93B000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E93D000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363a00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3240
+[Patina INFO] Loaded image at 0x000000807e936000 Size=0x8000 EntryPoint=0x807e938840 ConfigurationManagerDxe.efi
+[Patina INFO] InstallProtocolInterface: D85A4835-5A82-4894-AC02-706F43D5978E @ 0x000000807e939e1a
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: FE846898-7403-4932-B8AD-A0491F0C2CBA
+[Patina INFO] Applying image memory protections on 0x807E92D000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E934000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E935000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a7e4380
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4300
+[Patina INFO] Loaded image at 0x000000807e92c000 Size=0xa000 EntryPoint=0x807e931b3c DynamicTableFactoryDxe.efi
+[Patina INFO] InstallProtocolInterface: 91D1E327-FE5A-49B8-AB65-0ECE2DDB45EC @ 0x000000807e931d1e
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: F9D88642-0737-49BC-81B5-6889CD57D9EA
+[Patina INFO] Applying image memory protections on 0x807E928000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E92A000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E92B000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363c80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4340
+[Patina INFO] Loaded image at 0x000000807e927000 Size=0x5000 EntryPoint=0x807e929688 SmbiosDxe.efi
+[Patina INFO] InstallProtocolInterface: 03583FF6-CB36-4940-947E-B9B39F4AFAF7 @ 0x000000807e92a0e0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 168D1A6E-F4A5-448A-9E95-795661BB3067
+[Patina INFO] Applying image memory protections on 0x807E924000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E925000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E926000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363d80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4500
+[Patina INFO] Loaded image at 0x000000807e923000 Size=0x4000 EntryPoint=0x807e9244d8 ArmPciCpuIo2Dxe.efi
+[Patina INFO] InstallProtocolInterface: AD61F191-AE5F-4C0E-B9FA-E869D288C64F @ 0x000000807e925010
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 7ED510AA-9CDC-49D2-A306-6E11E359F9B3
+[Patina INFO] Applying image memory protections on 0x807E920000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E921000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E922000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363e00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3a40
+[Patina INFO] Loaded image at 0x000000807e91f000 Size=0x4000 EntryPoint=0x807e920b60 NonCoherentIoMmuDxe.efi
+[Patina INFO] InstallProtocolInterface: 4E939DE9-D948-4B0F-88ED-E6E1CE517C1E @ 0x000000807e921058
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 16EFDEC8-3F12-490C-9C98-386B2329EAED
+[Patina INFO] Applying image memory protections on 0x807EC50000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EC60000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EC70000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363d00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3a00
+[Patina INFO] Loaded image at 0x000000807ec40000 Size=0x40000 EntryPoint=0x807ec51fdc CixFirmwareUpdateDxe.efi
+[Patina INFO] InstallProtocolInterface: B1CCCD1C-C853-45CF-825D-902912558054 @ 0x000000807ec60000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 76B0148E-7211-43B6-8E8A-810589BE410A
+[Patina INFO] Applying image memory protections on 0x807E91B000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E91E000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a838700
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3ac0
+[Patina INFO] Loaded image at 0x000000807e91a000 Size=0x5000 EntryPoint=0x807e91cd38 MemConfigUpdateDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: AC8A912D-99CC-4D90-9A19-C548C1B8C4CD
+[Patina INFO] Applying image memory protections on 0x807E918000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E919000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a838780
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3c40
+[Patina INFO] Loaded image at 0x000000807e917000 Size=0x3000 EntryPoint=0x807e918684 TrustZoneConfigUpdateDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: A210F973-229D-4F4D-AA37-9895E6C9EABA
+[Patina INFO] Applying image memory protections on 0x807E914000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E915000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E916000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b364700
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4700
+[Patina INFO] Loaded image at 0x000000807e913000 Size=0x4000 EntryPoint=0x807e9143c4 DpcDxe.efi
+[Patina INFO] InstallProtocolInterface: 480F8AE9-0C46-4AA9-BC89-DB9FBA619806 @ 0x000000807e915010
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 22EA234F-E72A-11E4-91F9-28D2447C4829
+[Patina INFO] Applying image memory protections on 0x807E910000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E911000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E912000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b364780
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e6a00
+[Patina INFO] Loaded image at 0x000000807e90f000 Size=0x4000 EntryPoint=0x807e910d30 HttpUtilitiesDxe.efi
+[Patina INFO] InstallProtocolInterface: 3E35C163-4074-45DD-431E-23989DD86B32 @ 0x000000807e911020
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9B680FCE-AD6B-4F3A-B60B-F59899003443
+[Patina INFO] Applying image memory protections on 0x807E904000 for len 0x9000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E90D000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E90E000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b364c80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e2c40
+[Patina INFO] Loaded image at 0x000000807e903000 Size=0xc000 EntryPoint=0x807e90ad8c DevicePathDxe.efi
+[Patina INFO] InstallProtocolInterface: 0379BE4E-D706-437D-B037-EDB82FB772A4 @ 0x000000807e90c310
+[Patina INFO] InstallProtocolInterface: 8B843E20-8132-4852-90CC-551A4E4A7F1C @ 0x000000807e90c300
+[Patina INFO] InstallProtocolInterface: 05C99A21-C70F-4AD2-8A5F-35DF3343F51E @ 0x000000807e90c2f0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 58EC6163-B79D-4397-BE82-65F2DB5ED645
+[Patina INFO] Applying image memory protections on 0x807E901000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E902000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a83c900
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4a40
+[Patina INFO] Loaded image at 0x000000807e900000 Size=0x3000 EntryPoint=0x807e901198 RadxaSetupVariableInitDxe.efi
+[Patina INFO] InstallProtocolInterface: EEDF122D-A912-43D5-AA11-142762DD96FA @ 0x0000000000000000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 4A7EDE18-8BDC-4AE1-9BD5-D1F1B2BCCB5F
+[Patina INFO] Applying image memory protections on 0x807E8FD000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E8FF000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a83f500
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e4ac0
+[Patina INFO] Loaded image at 0x000000807e8fc000 Size=0x4000 EntryPoint=0x807e8fe180 FirmwareConfigUpdateDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: D93CE3D8-A7EB-4730-8C8E-CC466A9ECC3C
+[Patina INFO] Applying image memory protections on 0x807EC00000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EC10000 for len 0x10000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807EC20000 for len 0x10000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b364d00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e2c00
+[Patina INFO] Loaded image at 0x000000807ebf0000 Size=0x40000 EntryPoint=0x807ec00ad8 ReportStatusCodeRouterRuntimeDxe.efi
+[Patina INFO] InstallProtocolInterface: 86212936-0E76-41C8-A03A-2AF2FC1C39E2 @ 0x000000807ec10050
+[Patina INFO] InstallProtocolInterface: D2B2B828-0826-48A7-B3DF-983C006024F0 @ 0x000000807ec10060
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 999BD818-7DF7-4A9A-A502-9B75033E6A0F
+[Patina INFO] Applying image memory protections on 0x807E8F8000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E8FA000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E8FB000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b365b00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a7e3d80
+[Patina INFO] Loaded image at 0x000000807e8f7000 Size=0x5000 EntryPoint=0x807e8f930c EsrtDxe.efi
+[Patina INFO] InstallProtocolInterface: A340C064-723C-4A9C-A4DD-D5B47A26FBB0 @ 0x000000807e8fa070
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 590FAB35-88CA-9888-1198-E643B21A9824
+[Patina INFO] Applying image memory protections on 0x807E887000 for len 0x6B000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E8F2000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E8F4000 for len 0x3000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a83f780
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a841880
+[Patina INFO] Loaded image at 0x000000807e886000 Size=0x71000 EntryPoint=0x807e88afbc SystemFirmwareReportDxe.efi
+[Patina INFO] InstallProtocolInterface: 86C77A67-0B97-4633-A187-49104D0685C7 @ 0x000000807a840ba0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 479B6009-88D3-B397-CBFC-14BC904D1F68
+[Patina INFO] Applying image memory protections on 0x807E87F000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E884000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E885000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b365000
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a841a80
+[Patina INFO] Loaded image at 0x000000807e87e000 Size=0x8000 EntryPoint=0x807e881d8c DtbUpdateDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: DC92CDA1-5D43-4E3F-A594-15B6886893F3
+[Patina INFO] Applying image memory protections on 0x807E87C000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E87D000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a863a00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a863ac0
+[Patina INFO] Loaded image at 0x000000807e87b000 Size=0x3000 EntryPoint=0x807e87c0f4 AcpiPlatformDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Depex evaluation complete, scheduled 21 drivers
+[Patina INFO] Loading file: 3B08B59E-B317-4824-8C53-871C9B8571F5
+[Patina INFO] Applying image memory protections on 0x807E875000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E879000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E87A000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b366880
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a774400
+[Patina INFO] Loaded image at 0x000000807e874000 Size=0x7000 EntryPoint=0x807e876e5c PdDxe.efi
+[18.350] [UEFI] E6C1 PdDxeStart
+Update Pd Device 0 state, Mode: TYPEC_STATE_DISCONNECT, Orientation: TYPEC_ORIENTATION_NONE
+Update Pd Device 1 state, Mode: TYPEC_DP_STATE_E, Orientation: TYPEC_ORIENTATION_NORMAL
+Update Pd Device 2 state, Mode: TYPEC_STATE_USB, Orientation: TYPEC_ORIENTATION_REVERSE
+Update Pd Device 3 state, Mode: TYPEC_DP_STATE_E, Orientation: TYPEC_ORIENTATION_NORMAL
+[Patina INFO] InstallProtocolInterface: 0CA5CC68-66C7-4E45-A3F0-E53CC6DB519A @ 0x000000807e879000
+[18.393] [UEFI] E700 PdDxeEnd
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: B336F62D-4135-4A55-AE4E-4971BBF0885D
+[Patina INFO] Applying image memory protections on 0x807EBC0000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807EBD0000 for len 0x10000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a774480
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a863bc0
+[Patina INFO] Loaded image at 0x000000807ebb0000 Size=0x30000 EntryPoint=0x807ebc0c0c RealTimeClock.efi
+[Patina INFO] InstallProtocolInterface: 27CFAC87-46CC-11D4-9A38-0090273FC14D @ 0x0000000000000000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: BBE2668C-0EFC-46FB-9137-4F2DA8F419F3
+[Patina INFO] Applying image memory protections on 0x807E871000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E873000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807a774780
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807a774640
+[Patina INFO] Loaded image at 0x000000807e870000 Size=0x4000 EntryPoint=0x807e872010 ConsolePrefDxe.efi
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e873374
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 1448F299-7269-45BA-8C01-673A173FE03D
+[Patina INFO] Applying image memory protections on 0x807E869000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E86E000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E86F000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ad59480
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad59440
+[Patina INFO] Loaded image at 0x000000807e868000 Size=0x8000 EntryPoint=0x807e86b754 EcPlatformDxe.efi
+[Patina INFO] InstallProtocolInterface: 1422C857-10C5-43C5-AB6D-47155AD13DC5 @ 0x000000807e86e098
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 496EE240-DB1F-4A14-BD76-347FE9873624
+[Patina INFO] Applying image memory protections on 0x807E863000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E866000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E867000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ad59880
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad59bc0
+[Patina INFO] Loaded image at 0x000000807e862000 Size=0x6000 EntryPoint=0x807e864bf4 AcpiSocDxe.efi
+[Patina INFO] InstallProtocolInterface: 1B5EE0D9-1145-42B9-9333-F98B3D60F703 @ 0x000000807ad59a98
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 89122868-BCFD-49E8-88A3-06635CB7B3CF
+[Patina INFO] Applying image memory protections on 0x807E860000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E861000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ad67300
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad59c40
+[Patina INFO] Loaded image at 0x000000807e85f000 Size=0x3000 EntryPoint=0x807e8600f4 DynamicTableManagerDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: F3FE0E33-EA38-4069-9FB5-BE23407207C7
+[Patina INFO] Applying image memory protections on 0x807E859000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E85D000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E85E000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae55f80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae55f00
+[Patina INFO] Loaded image at 0x000000807e858000 Size=0x7000 EntryPoint=0x807e85b348 ProcessorSubClass.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 3BFC114C-98F1-492E-97D1-98567E4F20D0
+[Patina INFO] Applying image memory protections on 0x807E855000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E857000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae55180
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae53a40
+[Patina INFO] Loaded image at 0x000000807e854000 Size=0x4000 EntryPoint=0x807e855d8c CixSmbiosDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 128FB770-5E79-4176-9E51-9BB268A17DD1
+[Patina INFO] Applying image memory protections on 0x807E84E000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E852000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E853000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae54e00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae50680
+[Patina INFO] Loaded image at 0x000000807e84d000 Size=0x7000 EntryPoint=0x807e850508 PciHostBridgeDxe.efi
+[Patina INFO] InstallProtocolInterface: CF8034BE-6768-4D8B-B739-7CCE683A9FBE @ 0x000000807ae54c40
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae4cf18
+[Patina INFO] InstallProtocolInterface: 2F707EBB-4A1A-11D4-9A38-0090273FC14D @ 0x000000807ae571f0
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae4cb18
+[Patina INFO] InstallProtocolInterface: 2F707EBB-4A1A-11D4-9A38-0090273FC14D @ 0x000000807ae575f0
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae4c618
+[Patina INFO] InstallProtocolInterface: 2F707EBB-4A1A-11D4-9A38-0090273FC14D @ 0x000000807ae579f0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 74C958A8-4905-9991-4560-1FB44569AF9E
+[Patina INFO] Applying image memory protections on 0x807E84A000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E84C000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae54a00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae4ba00
+[Patina INFO] Loaded image at 0x000000807e849000 Size=0x4000 EntryPoint=0x807e84ad80 FwVersionProtocolTest.efi
+------Begin firmware version dump------
+ SE:beta2.0-f03dcd02b3ec
+ PM:00.10.002-791c46272210
+ PBL:v2.7-33527c31abbe
+ ATF:v2.7-33527c31abbe
+ TEE:Beta_2.1.5_release-3.17-67e342df9765
+ UEFI:0.0.1
+ STMM:Beta2-W32M260803N-1196cc10b289
+ EC:V1.07-d9209c7dd463
+ Board Id:B4(PHECDA-Rev A)
+ PD:0.0 1.0
+ PMIC: 0x00 0x00 0x00 
+------End firmware version dump------
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: E622443C-284E-4B47-A984-FD66B482DAC0
+[Patina INFO] Applying image memory protections on 0x807E845000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E847000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E848000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b364680
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae481c0
+[Patina INFO] Loaded image at 0x000000807e844000 Size=0x5000 EntryPoint=0x807e84644c BootManagerPolicyDxe.efi
+[Patina INFO] InstallProtocolInterface: FEDF8E0C-E147-11E3-9903-B8E8562CBAFA @ 0x000000807e847130
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: EBF342FE-B1D3-4EF8-957C-8048606FF671
+[Patina INFO] Applying image memory protections on 0x807E832000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E842000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E843000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae54080
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae47600
+[Patina INFO] Loaded image at 0x000000807e831000 Size=0x13000 EntryPoint=0x807e8338d0 SetupBrowser.efi
+[Patina INFO] InstallProtocolInterface: B9D4C360-BCFB-4F9B-9298-53C136982258 @ 0x000000807e842190
+[Patina INFO] InstallProtocolInterface: A770C357-B693-4E6D-A6CF-D21C728E550B @ 0x000000807e8421c0
+[Patina INFO] InstallProtocolInterface: 1F73B18D-4630-43C1-A1DE-6F80855D7DA4 @ 0x000000807e8421a0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 6D33944A-EC75-4855-A54D-809C75241F6C
+[Patina INFO] Applying image memory protections on 0x807E81F000 for len 0x10000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E82F000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E830000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae53c80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae47100
+[Patina INFO] Loaded image at 0x000000807e81e000 Size=0x13000 EntryPoint=0x807e81fae0 BdsDxe.efi
+[Patina INFO] InstallProtocolInterface: 665E3FF6-46CC-11D4-9A38-0090273FC14D @ 0x000000807e82f008
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: B8267B10-B0C8-4631-8EC4-442A62F7970F
+[Patina INFO] Applying image memory protections on 0x807E7B7000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E7B8000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E7B9000 for len 0x64000 with attributes 0x24008
+[Patina INFO] Applying image memory protections on 0x807E81D000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae53980
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae46180
+[Patina INFO] InstallProtocolInterface: 6A1EE763-D47A-43B4-AABE-EF1DE2AB56FC @ 0x000000807e752000
+[Patina INFO] Loaded image at 0x000000807e7b6000 Size=0x68000 EntryPoint=0x807e7b7168 LogoDxe.efi
+[Patina INFO] InstallProtocolInterface: 53CD299F-2BC1-40C0-8C07-23F64FDB30E0 @ 0x000000807e7b8040
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: EDB82499-30D4-4481-B4F9-0F1685480096
+[Patina INFO] Applying image memory protections on 0x807E74E000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E751000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae53280
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae45480
+[Patina INFO] Loaded image at 0x000000807e74d000 Size=0x5000 EntryPoint=0x807e74fc6c SystemInfoDxe.efi
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e7515d8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 1FFDAA93-A1D1-40EB-ADC8-37EEB86A7995
+[Patina INFO] Applying image memory protections on 0x807E744000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E747000 for len 0x5000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E74C000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae52b80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae41980
+[Patina INFO] Loaded image at 0x000000807e743000 Size=0xa000 EntryPoint=0x807e745e78 PlatformConfigDxe.efi
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e74be98
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807e74be80
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: D3BEA75B-165C-440F-830D-C972EFA4BED1
+[Patina INFO] Applying image memory protections on 0x807E73F000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E742000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae52280
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae3f700
+[Patina INFO] Loaded image at 0x000000807e73e000 Size=0x5000 EntryPoint=0x807e740514 SeConfigUpdateDxe.efi
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e74226c
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: FC097B3C-2EBD-4A75-A3DA-121DCAB365CC
+[Patina INFO] Applying image memory protections on 0x807E73C000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E73D000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae51b00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae3e600
+[Patina INFO] Loaded image at 0x000000807e73b000 Size=0x3000 EntryPoint=0x807e73c6fc DtPlatformDxe.efi
+[Patina INFO] InstallProtocolInterface: F0966B41-C23F-41B9-9604-0FF7E111965A @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e73d390
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: E6727A5E-CBCD-44C8-B37F-78BC3A0C16C8
+[Patina INFO] Applying image memory protections on 0x807E65D000 for len 0x86000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E6E3000 for len 0x57000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E73A000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae51580
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae3b6c0
+[Patina INFO] Loaded image at 0x000000807e65c000 Size=0xdf000 EntryPoint=0x807e6abbf8 X86EmulatorDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(8000000000000014)
+[Patina INFO] Loading file: 00160F8D-2B35-4DF2-BBE0-B272A8D631F0
+[Patina INFO] Applying image memory protections on 0x807E65A000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E65B000 for len 0x1000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae51200
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae3ab00
+[Patina INFO] Loaded image at 0x000000807e659000 Size=0x3000 EntryPoint=0x807e65ac38 FirmwarePerformanceDxe.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 7CA4DA59-3F21-4A7C-801D-018FABB96615
+[Patina INFO] Applying image memory protections on 0x807E656000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E657000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E658000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b365a00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae3a600
+[Patina INFO] Loaded image at 0x000000807e655000 Size=0x4000 EntryPoint=0x807e656250 PlatformSmbios.efi
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Depex evaluation complete, scheduled 46 drivers
+[Patina INFO] Loading file: 71FD84CD-353B-464D-B7A4-6EA7B96995CB
+[Patina INFO] Applying image memory protections on 0x807E651000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E653000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E654000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b366900
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae38080
+[Patina INFO] Loaded image at 0x000000807e650000 Size=0x5000 EntryPoint=0x807e652a08 NonDiscoverablePciDeviceDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e653030
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e653000
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e653018
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 2FB92EFA-2EE0-4BAE-9EB6-7464125E1EF7
+[Patina INFO] Applying image memory protections on 0x807E64A000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E64E000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E64F000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae50900
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae37880
+[Patina INFO] Loaded image at 0x000000807e649000 Size=0x7000 EntryPoint=0x807e64d874 UhciDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e64e0d0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e64e0a0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e64e0b8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: BDFE430E-8F2A-4DB0-9991-6F856594777E
+[Patina INFO] Applying image memory protections on 0x807E642000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E647000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E648000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae50980
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae37480
+[Patina INFO] Loaded image at 0x000000807e641000 Size=0x8000 EntryPoint=0x807e6461bc EhciDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e6470d0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e6470a0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e6470b8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: B7F50E91-A759-412C-ADE4-DCD03E7F7C28
+[Patina INFO] Applying image memory protections on 0x807E638000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E63F000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E640000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae50600
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae34dc0
+[Patina INFO] Loaded image at 0x000000807e637000 Size=0xa000 EntryPoint=0x807e63e798 XhciDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e63f0d0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e63f0a0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e63f0b8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 240612B7-A063-11D4-9A3A-0090273FC14D
+[Patina INFO] Applying image memory protections on 0x807E630000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E635000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E636000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae50100
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae37080
+[Patina INFO] Loaded image at 0x000000807e62f000 Size=0x8000 EntryPoint=0x807e6342b0 UsbBusDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e6350e0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e6350b0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e6350c8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9FB4B4A7-42C0-4BCD-8540-9BCC6711F83E
+[Patina INFO] Applying image memory protections on 0x807E62A000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E62D000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E62E000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae50180
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae37c80
+[Patina INFO] Loaded image at 0x000000807e629000 Size=0x6000 EntryPoint=0x807e62c870 UsbMassStorageDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e62d070
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e62d0d0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e62d0e8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 2D2E62CF-9ECF-43B7-8219-94E7FC713DFE
+[Patina INFO] Applying image memory protections on 0x807E624000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E627000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E628000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4fd00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae33900
+[Patina INFO] Loaded image at 0x000000807e623000 Size=0x6000 EntryPoint=0x807e626d70 UsbKbDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e627130
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e627100
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e627118
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 2D2E62AA-9ECF-43B7-8219-94E7FC713DFE
+[Patina INFO] Applying image memory protections on 0x807E61F000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E621000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E622000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4f880
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae33500
+[Patina INFO] Loaded image at 0x000000807e61e000 Size=0x5000 EntryPoint=0x807e620aa4 UsbMouseDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e6210c0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e621090
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e6210a8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: F0E6A44F-7195-41C3-AC64-54F202CD0A21
+[Patina INFO] Applying image memory protections on 0x807E5BB000 for len 0x5C000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E617000 for len 0x4000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E61B000 for len 0x3000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4f580
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae32800
+[Patina INFO] Loaded image at 0x000000807e5ba000 Size=0x64000 EntryPoint=0x807e5bef7c SecureBootConfigDxe.efi
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae32c18
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807e619768
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e6198a0
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807ae4ea20
+[Patina INFO] InstallProtocolInterface: F0E6A44F-7195-41C3-AC64-54F202CD0A21 @ 0x000000807ae4ea18
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 51CCF399-4FDF-4E55-A45B-E123F84D456A
+[Patina INFO] Applying image memory protections on 0x807E5B6000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E5B8000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E5B9000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4e300
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae2db00
+[Patina INFO] Loaded image at 0x000000807e5b5000 Size=0x5000 EntryPoint=0x807e5b781c ConPlatformDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5b8030
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5b8000
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5b8018
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5b8060
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5b8000
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5b8018
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 408EDCEC-CF6D-477C-A5A8-B4844E3DE281
+[Patina INFO] Applying image memory protections on 0x807E5AE000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E5B3000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E5B4000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4e000
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae2e000
+[Patina INFO] Loaded image at 0x000000807e5ad000 Size=0x8000 EntryPoint=0x807e5b2164 ConSplitterDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5b3090
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5b3060
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5b3078
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5b3150
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5b3120
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5b3138
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5b3030
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5b3000
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5b3018
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5b30f0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5b30c0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5b30d8
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5b31b0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5b3180
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5b3198
+[Patina INFO] InstallProtocolInterface: 387477C1-69C7-11D2-8E39-00A0C969723B @ 0x000000807e5b32f0
+[Patina INFO] InstallProtocolInterface: DD9E7534-7762-4698-8C14-F58517A625AA @ 0x000000807e5b3320
+[Patina INFO] InstallProtocolInterface: 31878C87-0B75-11D5-9A4F-0090273FC14D @ 0x000000807e5b3390
+[Patina INFO] InstallProtocolInterface: 8D59D32B-C655-4AE9-9B15-F25904992A43 @ 0x000000807e5b33e8
+[Patina INFO] InstallProtocolInterface: 387477C2-69C7-11D2-8E39-00A0C969723B @ 0x000000807e5b3478
+[Patina INFO] InstallProtocolInterface: 387477C2-69C7-11D2-8E39-00A0C969723B @ 0x000000807e5b3668
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: CCCB0C28-4B24-11D5-9A5A-0090273FC14D
+[Patina INFO] Applying image memory protections on 0x807E5A7000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E5AA000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E5AC000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4d980
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae2a980
+[Patina INFO] Loaded image at 0x000000807e5a6000 Size=0x7000 EntryPoint=0x807e5a90d8 GraphicsConsoleDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5aa118
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5aa0e8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5aa100
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9E863906-A40F-4875-977F-5B93FF237FC6
+[Patina INFO] Applying image memory protections on 0x807E59F000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E5A4000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E5A5000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4d480
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae28380
+[Patina INFO] Loaded image at 0x000000807e59e000 Size=0x8000 EntryPoint=0x807e5a2f08 TerminalDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5a4260
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5a4230
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5a4248
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 20ADBB1E-9298-4B74-A087-FC19A4732805
+[Patina INFO] Applying image memory protections on 0x807E595000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E59C000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E59D000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4d200
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae27680
+[Patina INFO] Loaded image at 0x000000807e594000 Size=0xa000 EntryPoint=0x807e598898 I2cHidKeyboard.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e59c068
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e59c098
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e59c0b0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 4E5CA006-34F4-42D9-BD47-0F1E26A64D5E
+[Patina INFO] Applying image memory protections on 0x807E58B000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E592000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E593000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4cb80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae282c0
+[Patina INFO] Loaded image at 0x000000807e58a000 Size=0xa000 EntryPoint=0x807e58f2fc I2cHidServiceDriver.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5920a8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5920d8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5920f0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 70CB8A73-5B96-32B9-8F78-F6248A92F3FE
+[Patina INFO] Applying image memory protections on 0x807E581000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E588000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E589000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4ce00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae26a00
+[Patina INFO] Loaded image at 0x000000807e580000 Size=0xa000 EntryPoint=0x807e58103c LcdGraphicsOutputDxe.efi
+[Patina INFO] InstallProtocolInterface: 9042A9DE-23DC-4A38-96FB-7ADED080516A @ 0x000000807ae4d378
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae4d398
+[Patina INFO] UninstallProtocolInterface: 9042A9DE-23DC-4A38-96FB-7ADED080516A @ 0x000000807ae4d378
+[Patina INFO] UninstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae4d398
+[Patina INFO] start_image entrypoint exit with status: Status(800000000000000e)
+[Patina INFO] Loading file: 27E5BA77-5839-400B-A7DA-5F5D78F0C539
+[Patina ERROR] core_load_pe_image failed: AmdGop.efi section alignment of 0x20 is not a multiple of page size 0x1000
+[Patina ERROR] Failed to load: load_image returned LoadError
+[Patina INFO] Loading file: 6B38F7B4-AD98-40E9-9093-ACA2B5A253C4
+[Patina INFO] Applying image memory protections on 0x807E57C000 for len 0x2000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E57E000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E57F000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807b363900
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae25400
+[Patina INFO] Loaded image at 0x000000807e57b000 Size=0x5000 EntryPoint=0x807e57d7b0 DiskIoDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e57e030
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e57e000
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e57e018
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 1FA1F39E-FEFF-4AAE-BD7B-38A070A3B609
+[Patina INFO] Applying image memory protections on 0x807E575000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E579000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E57A000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4c280
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae25900
+[Patina INFO] Loaded image at 0x000000807e574000 Size=0x7000 EntryPoint=0x807e57804c PartitionDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5790d8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5790a8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5790c0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 961578FE-B6B7-44C3-AF35-6BC705CD2B1F
+[Patina INFO] Applying image memory protections on 0x807E56C000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E572000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E573000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4c500
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae25000
+[Patina INFO] Loaded image at 0x000000807e56b000 Size=0x9000 EntryPoint=0x807e571620 Fat.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5721b8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e572188
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5721a0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: CD3BAFB6-50FB-4FE8-8E4E-AB74D2C1A600
+[Patina INFO] Applying image memory protections on 0x807E568000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E569000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E56A000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4c180
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae24c00
+[Patina INFO] Loaded image at 0x000000807e567000 Size=0x4000 EntryPoint=0x807e568414 EnglishDxe.efi
+[Patina INFO] InstallProtocolInterface: 1D85CD7F-F43D-11D2-9A0C-0090273FC14D @ 0x000000807e569038
+[Patina INFO] InstallProtocolInterface: A4C751FC-23AE-4C3E-92E9-4964CF63F349 @ 0x000000807e569000
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 93B80004-9FB3-11D4-9A3A-0090273FC14D
+[Patina INFO] Applying image memory protections on 0x807E558000 for len 0xD000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E565000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E566000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4ba80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae24800
+[Patina INFO] Loaded image at 0x000000807e557000 Size=0x10000 EntryPoint=0x807e55abd8 PciBusDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e565218
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5651e8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e565200
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 5BE3BDF4-53CF-46A3-A6A9-73C34A6E5EE3
+[Patina INFO] Applying image memory protections on 0x807E54F000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E555000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E556000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4b580
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae24400
+[Patina INFO] Loaded image at 0x000000807e54e000 Size=0x9000 EntryPoint=0x807e55487c NvmExpressDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e555160
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e555100
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e555118
+[Patina INFO] InstallProtocolInterface: 5C198761-16A8-4E69-972C-89D67954F81D @ 0x000000807e555190
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 820C59BB-274C-43B2-83EA-DAC673035A59
+[Patina INFO] Applying image memory protections on 0x807E54B000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E54C000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E54D000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4b900
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae26100
+[Patina INFO] Loaded image at 0x000000807e54a000 Size=0x4000 EntryPoint=0x807e54be98 SataController.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e54c080
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e54c050
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e54c068
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 19DF145A-B1D4-453F-8507-38816676D7F6
+[Patina INFO] Applying image memory protections on 0x807E545000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E548000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E549000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4b480
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae220c0
+[Patina INFO] Loaded image at 0x000000807e544000 Size=0x6000 EntryPoint=0x807e547b50 AtaBusDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e548030
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e548000
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e548018
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 5E523CB4-D397-4986-87BD-A6DD8B22F455
+[Patina INFO] Applying image memory protections on 0x807E53C000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E542000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E543000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4ad80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae22200
+[Patina INFO] Loaded image at 0x000000807e53b000 Size=0x9000 EntryPoint=0x807e5419d0 AtaAtapiPassThruDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e542038
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e542008
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e542020
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: A2F436EA-A127-4EF8-957C-8048606FF670
+[Patina INFO] Applying image memory protections on 0x807E534000 for len 0x5000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E539000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E53A000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4b000
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae20840
+[Patina INFO] Loaded image at 0x000000807e533000 Size=0x8000 EntryPoint=0x807e537eac SnpDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5390c0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e539090
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5390a8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: E4F61863-FE2C-4B56-A8F4-08519BC439DF
+[Patina INFO] Applying image memory protections on 0x807E52D000 for len 0x4000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E531000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E532000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4ac80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae20340
+[Patina INFO] Loaded image at 0x000000807e52c000 Size=0x7000 EntryPoint=0x807e530818 VlanConfigDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e531648
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e531618
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e531630
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 025BBFC7-E6A9-4B8B-82AD-6815A1AEAF4A
+[Patina INFO] Applying image memory protections on 0x807E524000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E52A000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E52B000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4a580
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae1fb40
+[Patina INFO] Loaded image at 0x000000807e523000 Size=0x9000 EntryPoint=0x807e529834 MnpDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e52a0d8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e52a0a8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e52a0c0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 529D3F93-E8E9-4E73-B1E1-BDF6A9D50113
+[Patina INFO] Applying image memory protections on 0x807E51E000 for len 0x3000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E521000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E522000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4a800
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae1ff40
+[Patina INFO] Loaded image at 0x000000807e51d000 Size=0x6000 EntryPoint=0x807e5209e8 ArpDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e521038
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e521008
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e521020
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 94734718-0BBC-47FB-96A5-EE7A5AE6A2AD
+[Patina INFO] Applying image memory protections on 0x807E515000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E51B000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E51C000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4a480
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae1f740
+[Patina INFO] Loaded image at 0x000000807e514000 Size=0x9000 EntryPoint=0x807e51a8ac Dhcp4Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e51bbe8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e51bbb8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e51bbd0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 9FB1A1F3-3B71-4324-B39A-745CBB015FFF
+[Patina INFO] Applying image memory protections on 0x807E504000 for len 0xE000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E512000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E513000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae49d80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae1f240
+[Patina INFO] Loaded image at 0x000000807e503000 Size=0x11000 EntryPoint=0x807e5053b8 Ip4Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e512788
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e512748
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e512760
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 6D6963AB-906D-4A65-A7CA-BD40E5D6AF2B
+[Patina INFO] Applying image memory protections on 0x807E4FB000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E501000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E502000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae4a080
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae1ee40
+[Patina INFO] Loaded image at 0x000000807e4fa000 Size=0x9000 EntryPoint=0x807e500550 Udp4Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e5010e8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e5010b8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e5010d0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: DC3641B8-2FA8-4ED3-BC1F-F9962A03454B
+[Patina INFO] Applying image memory protections on 0x807E4F1000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E4F8000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E4F9000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae49a80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae1e640
+[Patina INFO] Loaded image at 0x000000807e4f0000 Size=0xa000 EntryPoint=0x807e4f6a00 Mtftp4Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4f80e0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4f80b0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4f80c8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 95E3669D-34BE-4775-A651-7EA41B69D89E
+[Patina INFO] Applying image memory protections on 0x807E4E7000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E4EE000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E4EF000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae49800
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad9c040
+[Patina INFO] Loaded image at 0x000000807e4e6000 Size=0xa000 EntryPoint=0x807e4ed420 Dhcp6Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4ee030
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4ee000
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4ee018
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 5BEDB5CC-D830-4EB2-8742-2D4CC9B54F2C
+[Patina INFO] Applying image memory protections on 0x807E4D0000 for len 0x13000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E4E3000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E4E5000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae49500
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad9c000
+[Patina INFO] Loaded image at 0x000000807e4cf000 Size=0x17000 EntryPoint=0x807e4d258c Ip6Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4e3158
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4e3128
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4e3140
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: D912C7BC-F098-4367-92BA-E911083C7B0E
+[Patina INFO] Applying image memory protections on 0x807E4C7000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E4CD000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E4CE000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae49280
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae20c40
+[Patina INFO] Loaded image at 0x000000807e4c6000 Size=0x9000 EntryPoint=0x807e4cc3b8 Udp6Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4cd0e8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4cd0b8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4cd0d0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 99F03B99-98D8-49DD-A8D3-3219D0FFE41E
+[Patina INFO] Applying image memory protections on 0x807E4BD000 for len 0x7000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E4C4000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E4C5000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae48d80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad9a640
+[Patina INFO] Loaded image at 0x000000807e4bc000 Size=0xa000 EntryPoint=0x807e4c30fc Mtftp6Dxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4c40e0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4c40b0
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4c40c8
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 1A7E4468-2F55-4A56-903C-01265EB7622B
+[Patina INFO] Applying image memory protections on 0x807E4AF000 for len 0xB000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E4BA000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E4BB000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae48a00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad9a140
+[Patina INFO] Loaded image at 0x000000807e4ae000 Size=0xe000 EntryPoint=0x807e4b8ea4 TcpDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4ba0f0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4ba1e8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4ba200
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4ba170
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4ba1e8
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4ba200
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: B95E9FDA-26DE-48D2-8807-1F9107AC5E3A
+[Patina INFO] Applying image memory protections on 0x807E49F000 for len 0xD000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E4AC000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E4AD000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae48700
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad9aa40
+[Patina INFO] Loaded image at 0x000000807e49e000 Size=0x10000 EntryPoint=0x807e4a36a4 UefiPxeBcDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4ac280
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4ac250
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4ac268
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4ac2b0
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e4ac250
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4ac268
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: B219E140-DFFC-11E3-B956-0022681E6906
+[Patina INFO] Applying image memory protections on 0x807E493000 for len 0x9000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E49C000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E49D000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae48200
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad99940
+[Patina INFO] Loaded image at 0x000000807e492000 Size=0xc000 EntryPoint=0x807e49b13c DnsDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e49c008
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e49c068
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e49c080
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e49c038
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e49c068
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e49c080
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 2366C20F-E15A-11E3-8BF1-E4115B28BC50
+[Patina INFO] Applying image memory protections on 0x807E488000 for len 0x8000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E490000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E491000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae47b80
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad99d40
+[Patina INFO] Loaded image at 0x000000807e487000 Size=0xb000 EntryPoint=0x807e48f860 HttpDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4901c8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e490198
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4901b0
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4901f8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e490198
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4901b0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: ECEBCB00-D9C8-11E4-AF3D-8CDCD426C973
+[Patina INFO] Applying image memory protections on 0x807E479000 for len 0xC000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E485000 for len 0x1000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E486000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae47980
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad99540
+[Patina INFO] Loaded image at 0x000000807e478000 Size=0xf000 EntryPoint=0x807e483558 HttpBootDxe.efi
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e4855d8
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e485598
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4855b0
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e485608
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e485598
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e4855b0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: E660EA85-058E-4B55-A54B-F02F83A24707
+[Patina INFO] Applying image memory protections on 0x807E467000 for len 0xD000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E474000 for len 0x3000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E477000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae47400
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad98840
+[Patina INFO] Loaded image at 0x000000807e466000 Size=0x12000 EntryPoint=0x807e468ce0 DisplayEngine.efi
+[Patina INFO] InstallProtocolInterface: 9BBE29E9-FDA1-41EC-AD52-452213742D2E @ 0x000000807e475d88
+[Patina INFO] InstallProtocolInterface: 4311EDC0-6054-46D4-9E40-893EA952FCCC @ 0x000000807e475da0
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 28A03FF4-12B3-4305-A417-BB1A4F94081E
+[Patina INFO] Applying image memory protections on 0x807E45D000 for len 0x6000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E463000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E465000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae43280
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad6c700
+[Patina INFO] Loaded image at 0x000000807e45c000 Size=0xa000 EntryPoint=0x807e462278 RamDiskDxe.efi
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ad6c318
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807e464158
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807e46429e
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807ae42530
+[Patina INFO] InstallProtocolInterface: AB38A0DF-6873-44A9-87E6-D4EB56148449 @ 0x000000807e464398
+[Patina INFO] InstallProtocolInterface: 28A03FF4-12B3-4305-A417-BB1A4F94081E @ 0x000000807ae42518
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Loading file: 81D01805-D9E4-4D67-A550-A04A04E1B8E8
+[Patina INFO] Applying image memory protections on 0x807E438000 for len 0x1000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E439000 for len 0x1E000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x807E457000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x807E459000 for len 0x1000 with attributes 0x24008
+[Patina INFO] Applying image memory protections on 0x807E45A000 for len 0x1000 with attributes 0x24008
+[Patina INFO] Applying image memory protections on 0x807E45B000 for len 0x1000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae41c00
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ad67780
+[Patina INFO] Loaded image at 0x000000807e437000 Size=0x25000 EntryPoint=0x807e439048 <no PDB>
+[Patina INFO] InstallProtocolInterface: 18A031AB-B443-4D1A-A5C0-0C09261E9F71 @ 0x000000807e457120
+[Patina INFO] InstallProtocolInterface: 107A772C-D5E1-11D4-9A46-0090273FC14D @ 0x000000807e457298
+[Patina INFO] InstallProtocolInterface: 6A7A5CFF-E8D9-4F70-BADA-75AB3025CE14 @ 0x000000807e457280
+[Patina INFO] InstallProtocolInterface: 4D330321-025F-4AAC-90D8-5ED900173B63 @ 0x000000807e457958
+[Patina INFO] start_image entrypoint exit with status: Status(0)
+[Patina INFO] Depex evaluation complete, scheduled 0 drivers
+[Patina INFO] Depex evaluation complete, scheduled 0 drivers
+[Patina INFO] Finished Dispatching Drivers
+[Patina INFO] InstallProtocolInterface: E3F5CC15-9635-4346-86A1-8327DE48231C @ 0x000000807b06a018
+[Patina INFO] InstallProtocolInterface: A6FDAD2A-A56F-45F8-80D3-2CFFF491CDC2 @ 0x000000807ad5bd98
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae40c18
+[Patina INFO] InstallProtocolInterface: 387477C1-69C7-11D2-8E39-00A0C969723B @ 0x000000807b06b220
+[Patina INFO] InstallProtocolInterface: DD9E7534-7762-4698-8C14-F58517A625AA @ 0x000000807b06b238
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae41518
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae56158
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae40998
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae561d8
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae40798
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae5d018
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae40718
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aedd098
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae40498
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aedd0d8
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae40098
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aedd118
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae40398
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aedd158
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae40318
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aedd198
+[Patina INFO] InstallProtocolInterface: 0D51905B-B77E-452A-A2C0-ECA0CC8D514A @ 0x000000807ae3fb98
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aedd1d8
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aef6e98
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b210428
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aef6ed8
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b210828
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aef6f58
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b211028
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aef6f98
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b211428
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807aef8018
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b211c28
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807af0a098
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b212028
+[Patina INFO] InstallProtocolInterface: 30CFE3E7-3DE1-4586-BE20-DEABA1B3B793 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b15a628
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b254038
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b215020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b214428
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b2689f0
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b226020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b214628
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b27d3a8
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b228020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b227028
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b291d60
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b229020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807b0f3f98
+[Patina INFO] InstallProtocolInterface: 2B2F68D6-0CD2-44CF-8E8B-BBA20B1B5B75 @ 0x000000807ae3f840
+[Patina INFO] InstallProtocolInterface: 387477C1-69C7-11D2-8E39-00A0C969723B @ 0x000000807b227838
+[Patina INFO] InstallProtocolInterface: DD9E7534-7762-4698-8C14-F58517A625AA @ 0x000000807b227850
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807b0faad8
+[Patina INFO] InstallProtocolInterface: 2B2F68D6-0CD2-44CF-8E8B-BBA20B1B5B75 @ 0x000000807ae3ed40
+b227228
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b2a6718
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b241020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b23aa28
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b2bb0d0
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b243020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b23ac28
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b2cfa88
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b2e5020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b23ae28
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b2e6038
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b2fc020
+[Patina INFO] InstallProtocolInterface: 4CF5B200-68B8-4CA5-9EEC-B23E3F50029A @ 0x000000807b2e4628
+[Patina INFO] InstallProtocolInterface: 3E745226-9818-45B6-A2AC-D7CD0E8BA2BC @ 0x000000807b2fd038
+[Patina INFO] InstallProtocolInterface: 240612B7-A063-11D4-9A3A-0090273FC14D @ 0x000000807b312020
+[25.620] [UEFI] E1FF DxeMainEnd
+[Patina INFO] InstallProtocolInterface: 387477C1-69C7-11D2-8E39-00A0C969723B @ 0x000000807b311c40
+[Patina INFO] InstallProtocolInterface: DD9E7534-7762-4698-8C14-F58517A625AA @ 0x000000807b311d28
+[Patina INFO] InstallProtocolInterface: 387477C2-69C7-11D2-8E39-00A0C969723B @ 0x000000807b311c58
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae39a18
+[Patina INFO] InstallProtocolInterface: D3B36F2B-D551-11D4-9A46-0090273FC14D @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: D3B36F2C-D551-11D4-9A46-0090273FC14D @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: D3B36F2D-D551-11D4-9A46-0090273FC14D @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: D3B36F2B-D551-11D4-9A46-0090273FC14D @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: D3B36F2B-D551-11D4-9A46-0090273FC14D @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 52C78312-8EDC-4233-98F2-1A1AA5E388A5 @ 0x000000807b31b660
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae38c18
+[Patina INFO] InstallProtocolInterface: 964E5B21-6459-11D2-8E39-00A0C969723B @ 0x000000807b31d8b8
+[Patina INFO] InstallProtocolInterface: A77B2472-E282-4E9F-A245-C2C0E27BBCC1 @ 0x000000807b31d8e8
+[Patina INFO] InstallProtocolInterface: D432A67F-14DC-484B-B3BB-3F0291849327 @ 0x000000807b31d910
+[Patina INFO] InstallProtocolInterface: C88B0B6D-0DFC-49A7-9CB4-49074B4C3A78 @ 0x000000807b31d940
+[Patina INFO] InstallProtocolInterface: CE345171-BA0B-11D2-8E4F-00A0C969723B @ 0x000000807a7f2920
+[Patina INFO] InstallProtocolInterface: 151C8EAE-7F2C-472C-9E54-9828194F6A88 @ 0x000000807a7f2938
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae38898
+[Patina INFO] InstallProtocolInterface: 964E5B21-6459-11D2-8E39-00A0C969723B @ 0x000000807b31d030
+[Patina INFO] InstallProtocolInterface: A77B2472-E282-4E9F-A245-C2C0E27BBCC1 @ 0x000000807b31d060
+[Patina INFO] InstallProtocolInterface: 8CF2F62C-BC9B-4821-808D-EC9EC421A1A0 @ 0x000000807b31d0e8
+[Patina INFO] InstallProtocolInterface: 0FC63DAF-8483-4772-8E79-3D69D8477DE4 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae38918
+[Patina INFO] InstallProtocolInterface: 964E5B21-6459-11D2-8E39-00A0C969723B @ 0x000000807b31d230
+[Patina INFO] InstallProtocolInterface: A77B2472-E282-4E9F-A245-C2C0E27BBCC1 @ 0x000000807b31d260
+[Patina INFO] InstallProtocolInterface: 8CF2F62C-BC9B-4821-808D-EC9EC421A1A0 @ 0x000000807b31d2e8
+[Patina INFO] InstallProtocolInterface: C12A7328-F81F-11D2-BA4B-00A0C93EC93B @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae38418
+[Patina INFO] InstallProtocolInterface: 964E5B21-6459-11D2-8E39-00A0C969723B @ 0x000000807b31ee30
+[Patina INFO] InstallProtocolInterface: A77B2472-E282-4E9F-A245-C2C0E27BBCC1 @ 0x000000807b31ee60
+[Patina INFO] InstallProtocolInterface: 8CF2F62C-BC9B-4821-808D-EC9EC421A1A0 @ 0x000000807b31eee8
+[Patina INFO] InstallProtocolInterface: 0FC63DAF-8483-4772-8E79-3D69D8477DE4 @ 0x0000000000000000
+[Patina INFO] InstallProtocolInterface: CE345171-BA0B-11D2-8E4F-00A0C969723B @ 0x000000807b3a3220
+[Patina INFO] InstallProtocolInterface: 151C8EAE-7F2C-472C-9E54-9828194F6A88 @ 0x000000807b3a3238
+[Patina INFO] InstallProtocolInterface: 964E5B22-6459-11D2-8E39-00A0C969723B @ 0x000000807b319030
+[Patina INFO] InstallProtocolInterface: CE345171-BA0B-11D2-8E4F-00A0C969723B @ 0x000000807ae39b20
+[Patina INFO] InstallProtocolInterface: 151C8EAE-7F2C-472C-9E54-9828194F6A88 @ 0x000000807ae39b38
+[Patina INFO] InstallProtocolInterface: CE345171-BA0B-11D2-8E4F-00A0C969723B @ 0x000000807ae39420
+[Patina INFO] InstallProtocolInterface: 151C8EAE-7F2C-472C-9E54-9828194F6A88 @ 0x000000807ae39438
+[Patina INFO] InstallProtocolInterface: 964E5B22-6459-11D2-8E39-00A0C969723B @ 0x000000807b320030
+[Patina INFO] InstallProtocolInterface: 7838B201-4381-439B-9DA1-2B1891634077 @ 0x000000807b327bb0
+[Patina INFO] InstallProtocolInterface: 6870F6C8-6286-4A73-8C49-8703822C2A5C @ 0x000000807b327bc8
+[Patina INFO] InstallProtocolInterface: 1ACED566-76ED-4218-BC81-767F1F977A89 @ 0x000000807b324cd0
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ae38c98
+[Patina INFO] InstallProtocolInterface: 7838B201-4381-439B-9DA1-2B1891634077 @ 0x000000807b327bb0
+[Patina INFO] InstallProtocolInterface: A19832B9-AC25-11D3-9A2D-0090273FC14D @ 0x00000007fe57d020
+[Patina INFO] InstallProtocolInterface: 9E23D768-D2F3-4366-9FC3-3A7ABA864374 @ 0x000000807b321030
+[Patina INFO] InstallProtocolInterface: F36FF770-A7E1-42CF-9ED2-56F0F271F44C @ 0x000000807ad675c0
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807ad67518
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807b948c20
+[Patina INFO] InstallProtocolInterface: E4F61863-FE2C-4B56-A8F4-08519BC439DF @ 0x000000807b948c18
+[Patina INFO] InstallProtocolInterface: 7AB33A91-ACE5-4326-B572-E7EE33D39F16 @ 0x000000807b94b140
+[Patina INFO] InstallProtocolInterface: F44C00EE-1F2C-4A00-AA09-1C9F3E0800A3 @ 0x000000807b94ac20
+[Patina INFO] InstallProtocolInterface: 7AB33A91-ACE5-4326-B572-E7EE33D39F16 @ 0x000000807b94b040
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807b94f218
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807b94e838
+[Patina INFO] InstallProtocolInterface: C51711E7-B4BF-404A-BFB8-0A048EF1FFE4 @ 0x000000807b94e020
+[Patina INFO] InstallProtocolInterface: 5B446ED1-E30B-4FAA-871A-3654ECA36080 @ 0x000000807b94e580
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807b94fc20
+[Patina INFO] InstallProtocolInterface: 83F01464-99BD-45E5-B383-AF6305D8E9E6 @ 0x000000807b952020
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807b954c20
+[Patina INFO] InstallProtocolInterface: 3AD9DF29-4501-478D-B1F8-7F7FE70E50F3 @ 0x000000807b953a38
+[Patina INFO] InstallProtocolInterface: 2FE800BE-8F01-4AA6-946B-D71388E1833F @ 0x000000807b952220
+[Patina INFO] InstallProtocolInterface: 7AB33A91-ACE5-4326-B572-E7EE33D39F16 @ 0x000000807b955940
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807b955b98
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807b956fe8
+[Patina INFO] InstallProtocolInterface: EC835DD3-FE0F-617B-A621-B350C3E13388 @ 0x000000807b956020
+[Patina INFO] InstallProtocolInterface: 937FE521-95AE-4D1A-8929-48BCD90AD31A @ 0x000000807b956f70
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807b95ba20
+[Patina INFO] InstallProtocolInterface: 66ED4721-3C98-4D3E-81E3-D03DD39A7254 @ 0x000000807b95a2a0
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807b95f620
+[Patina INFO] InstallProtocolInterface: 4F948815-B4B9-43CB-8A33-90E060B34955 @ 0x000000807b95f438
+[Patina INFO] InstallProtocolInterface: D9760FF3-3CCA-4267-80F9-7527FAFA4223 @ 0x000000807b95bc20
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807b960820
+[Patina INFO] InstallProtocolInterface: 00720665-67EB-4A99-BAF7-D3C33A1C7CC9 @ 0x000000807b95f3c0
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807b963020
+[Patina INFO] InstallProtocolInterface: EC20EB79-6C1A-4664-9A0D-D2E4CC16D664 @ 0x000000807b960340
+[Patina INFO] InstallProtocolInterface: BDC8E6AF-D9BC-4379-A72A-E0C4E75DAE1C @ 0x000000807b9626a0
+[Patina INFO] InstallProtocolInterface: 65530BC7-A359-410F-B010-5AADC7EC2B62 @ 0x000000807b964b38
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807b965020
+[Patina INFO] InstallProtocolInterface: 46E44855-BD60-4AB7-AB0D-A679B9447D77 @ 0x000000807b965938
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807b966820
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807b967a20
+[Patina INFO] InstallProtocolInterface: 4F948815-B4B9-43CB-8A33-90E060B34955 @ 0x000000807b967838
+[Patina INFO] InstallProtocolInterface: 7F1647C8-B76E-44B2-A565-F70FF19CD19E @ 0x000000807b967620
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807b969620
+[Patina INFO] InstallProtocolInterface: 3AD9DF29-4501-478D-B1F8-7F7FE70E50F3 @ 0x000000807b969438
+[Patina INFO] InstallProtocolInterface: B625B186-E063-44F7-8905-6A74DC6F52B4 @ 0x000000807b968b20
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807b96ae20
+[Patina INFO] InstallProtocolInterface: 3AD9DF29-4501-478D-B1F8-7F7FE70E50F3 @ 0x000000807b96ac38
+[Patina INFO] InstallProtocolInterface: 9D9A39D8-BD42-4A73-A4D5-8EE94BE11380 @ 0x000000807b96aa20
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807b96ea20
+[Patina INFO] InstallProtocolInterface: 4F948815-B4B9-43CB-8A33-90E060B34955 @ 0x000000807b96de38
+[Patina INFO] InstallProtocolInterface: 9FB9A8A1-2F4A-43A6-889C-D0F7B6C47AD5 @ 0x000000807b96dbb0
+[Patina INFO] InstallProtocolInterface: 7838B201-4381-439B-9DA1-2B1891634077 @ 0x000000807b9757b0
+[Patina INFO] InstallProtocolInterface: 6870F6C8-6286-4A73-8C49-8703822C2A5C @ 0x000000807b9757c8
+[Patina INFO] InstallProtocolInterface: 1ACED566-76ED-4218-BC81-767F1F977A89 @ 0x000000807b9728d0
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807b96e898
+[Patina INFO] InstallProtocolInterface: 7838B201-4381-439B-9DA1-2B1891634077 @ 0x000000807b9757b0
+[Patina INFO] InstallProtocolInterface: A19832B9-AC25-11D3-9A2D-0090273FC14D @ 0x00000007fe518020
+[Patina INFO] InstallProtocolInterface: 9E23D768-D2F3-4366-9FC3-3A7ABA864374 @ 0x000000807b977a30
+[Patina INFO] InstallProtocolInterface: F36FF770-A7E1-42CF-9ED2-56F0F271F44C @ 0x000000807baa4e40
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807baa4e98
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807baa7820
+[Patina INFO] InstallProtocolInterface: E4F61863-FE2C-4B56-A8F4-08519BC439DF @ 0x000000807baa7818
+[Patina INFO] InstallProtocolInterface: 7AB33A91-ACE5-4326-B572-E7EE33D39F16 @ 0x000000807baa8940
+[Patina INFO] InstallProtocolInterface: F44C00EE-1F2C-4A00-AA09-1C9F3E0800A3 @ 0x000000807baa8420
+[Patina INFO] InstallProtocolInterface: 7AB33A91-ACE5-4326-B572-E7EE33D39F16 @ 0x000000807baa8840
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807baabd98
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807b95d838
+[Patina INFO] InstallProtocolInterface: C51711E7-B4BF-404A-BFB8-0A048EF1FFE4 @ 0x000000807b95d020
+[Patina INFO] InstallProtocolInterface: 5B446ED1-E30B-4FAA-871A-3654ECA36080 @ 0x000000807b95d580
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807baad820
+[Patina INFO] InstallProtocolInterface: 83F01464-99BD-45E5-B383-AF6305D8E9E6 @ 0x000000807baaed20
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807bab1420
+[Patina INFO] InstallProtocolInterface: 3AD9DF29-4501-478D-B1F8-7F7FE70E50F3 @ 0x000000807bab1238
+[Patina INFO] InstallProtocolInterface: 2FE800BE-8F01-4AA6-946B-D71388E1833F @ 0x000000807b95a220
+[Patina INFO] InstallProtocolInterface: 7AB33A91-ACE5-4326-B572-E7EE33D39F16 @ 0x000000807bac2b40
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x000000807bac4298
+[Patina INFO] InstallProtocolInterface: 330D4706-F2A0-4E4F-A369-B66FA8D54385 @ 0x000000807bac3fe8
+[Patina INFO] InstallProtocolInterface: EC835DD3-FE0F-617B-A621-B350C3E13388 @ 0x000000807bac3020
+[Patina INFO] InstallProtocolInterface: 937FE521-95AE-4D1A-8929-48BCD90AD31A @ 0x000000807bac3f70
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807baa8020
+[Patina INFO] InstallProtocolInterface: 66ED4721-3C98-4D3E-81E3-D03DD39A7254 @ 0x000000807bac61a0
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807bacba20
+[Patina INFO] InstallProtocolInterface: 4F948815-B4B9-43CB-8A33-90E060B34955 @ 0x000000807bacb838
+[Patina INFO] InstallProtocolInterface: D9760FF3-3CCA-4267-80F9-7527FAFA4223 @ 0x000000807baca420
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807bacd020
+[Patina INFO] InstallProtocolInterface: 00720665-67EB-4A99-BAF7-D3C33A1C7CC9 @ 0x000000807bacc640
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807bacf220
+[Patina INFO] InstallProtocolInterface: EC20EB79-6C1A-4664-9A0D-D2E4CC16D664 @ 0x000000807bacc6c0
+[Patina INFO] InstallProtocolInterface: BDC8E6AF-D9BC-4379-A72A-E0C4E75DAE1C @ 0x000000807bacf0a0
+[Patina INFO] InstallProtocolInterface: 65530BC7-A359-410F-B010-5AADC7EC2B62 @ 0x000000807bad0d38
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807bad0e20
+[Patina INFO] InstallProtocolInterface: 46E44855-BD60-4AB7-AB0D-A679B9447D77 @ 0x000000807baea538
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807baebc20
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807baec420
+[Patina INFO] InstallProtocolInterface: 4F948815-B4B9-43CB-8A33-90E060B34955 @ 0x000000807baec238
+[Patina INFO] InstallProtocolInterface: 7F1647C8-B76E-44B2-A565-F70FF19CD19E @ 0x000000807baec120
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807baedc20
+[Patina INFO] InstallProtocolInterface: 3AD9DF29-4501-478D-B1F8-7F7FE70E50F3 @ 0x000000807baed638
+[Patina INFO] InstallProtocolInterface: B625B186-E063-44F7-8905-6A74DC6F52B4 @ 0x000000807baed520
+[Patina INFO] InstallProtocolInterface: 41D94CD2-35B6-455A-8258-D4E51334AADD @ 0x000000807baefc20
+[Patina INFO] InstallProtocolInterface: 3AD9DF29-4501-478D-B1F8-7F7FE70E50F3 @ 0x000000807baefa38
+[Patina INFO] InstallProtocolInterface: 9D9A39D8-BD42-4A73-A4D5-8EE94BE11380 @ 0x000000807baef820
+[Patina INFO] InstallProtocolInterface: 2C8759D5-5C2D-66EF-925F-B66C101957E2 @ 0x000000807baf3c20
+[Patina INFO] InstallProtocolInterface: 4F948815-B4B9-43CB-8A33-90E060B34955 @ 0x000000807baf3a38
+[Patina INFO] InstallProtocolInterface: 9FB9A8A1-2F4A-43A6-889C-D0F7B6C47AD5 @ 0x000000807baf2f30
+[Patina INFO] Depex evaluation complete, scheduled 0 drivers
+[28.078] [UEFI] E550 BmAfterConsole
+Dtb file not found
+[33.105] [UEFI] E580 DxeReadyToBoot
+[Patina INFO] Dumping MAT: MemoryAttributesTable {
+  version: 0x1
+  number_of_entries: 0x32
+  descriptor_size: 0x28
+  reserved: 0x0
+  entries: [
+Type                     Physical Start       Virtual Start   Number of Pages Attributes          
+RuntimeServicesData      0x82500000           0x0             0x1F00          XP                  
+RuntimeServicesData      0x85F00000           0x0             0x100           XP                  
+RuntimeServicesCode      0x807EB00000         0x0             0xB0            XP                  
+RuntimeServicesCode      0x807EBB0000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EBC0000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EBD0000         0x0             0x30            XP                  
+RuntimeServicesCode      0x807EC00000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EC10000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EC20000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807EC30000         0x0             0x20            XP                  
+RuntimeServicesCode      0x807EC50000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EC60000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EC70000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807EC80000         0x0             0x20            XP                  
+RuntimeServicesCode      0x807ECA0000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807ECB0000         0x0             0x30            XP                  
+RuntimeServicesCode      0x807ECE0000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807ECF0000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807ED00000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807ED10000         0x0             0x20            XP                  
+RuntimeServicesCode      0x807ED30000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807ED40000         0x0             0x30            XP                  
+RuntimeServicesCode      0x807ED70000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807ED80000         0x0             0x30            XP                  
+RuntimeServicesCode      0x807EDB0000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EDC0000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EDD0000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807EDE0000         0x0             0x20            XP                  
+RuntimeServicesCode      0x807EE00000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EE10000         0x0             0x30            XP                  
+RuntimeServicesCode      0x807EE40000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EE50000         0x0             0x30            XP                  
+RuntimeServicesCode      0x807EE80000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EE90000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EEA0000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807EEB0000         0x0             0x20            XP                  
+RuntimeServicesCode      0x807EED0000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EEE0000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EEF0000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807EF00000         0x0             0x20            XP                  
+RuntimeServicesCode      0x807EF20000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EF30000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EF40000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807EF50000         0x0             0x20            XP                  
+RuntimeServicesCode      0x807EF70000         0x0             0x10            RO                  
+RuntimeServicesCode      0x807EF80000         0x0             0x10            XP                  
+RuntimeServicesCode      0x807EF90000         0x0             0x10            XP|RO               
+RuntimeServicesCode      0x807EFA0000         0x0             0x10            XP                  
+RuntimeServicesData      0x807EFB0000         0x0             0xF10           XP                  
+RuntimeServicesData      0x807FEC0000         0x0             0xF0            XP                  
+
+  ]
+}
+
+[Patina INFO] Successfully installed MAT table!
+[Patina INFO] Applying image memory protections on 0x8079BF5000 for len 0xDD000 with attributes 0x20008
+[Patina INFO] Applying image memory protections on 0x8079CD2000 for len 0x2000 with attributes 0x4008
+[Patina INFO] Applying image memory protections on 0x8079CD4000 for len 0x2000 with attributes 0x24008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807ae3a680
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807bb0f400
+[Patina INFO] Loaded image at 0x0000008079bf4000 Size=0xe2000 EntryPoint=0x8079bfe788 embloader.efi
+[Patina INFO] InstallProtocolInterface: 09576E91-6D3F-11D2-8E39-00A0C969723B @ 0x0000008079ccfa91
+[Patina INFO] InstallProtocolInterface: 4006C0C1-FCB3-403E-996D-4A6C8724E06D @ 0x000000807bb57860
+[Patina INFO] Applying image memory protections on 0x8070230000 for len 0x18D0000 with attributes 0x20008
+[Patina INFO] Splitting large page at VA VirtualAddress(
+    0x8071A00000,
+) at level Level2 pt entry address: 0xFFFFC0201C68
+[Patina INFO] Applying image memory protections on 0x8071B00000 for len 0xBB0000 with attributes 0x4008
+[Patina INFO] InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B @ 0x000000807bb4e700
+[Patina INFO] InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF @ 0x000000807ae3b040
+[Patina INFO] Loaded image at 0x0000008070220000 Size=0x2490000 EntryPoint=0x8071aa03cc <no PDB>
+[Patina INFO] Splitting large page at VA VirtualAddress(
+    0x55FA00000,
+) at level Level2 pt entry address: 0xFFFFC00157E8
+[Patina INFO] EBS initiated.
+[Patina INFO] Disallowing alloc/free during ExitBootServices.
+[Patina INFO] UninstallProtocolInterface: AFB1216E-988C-49C0-87B3-808342593F64 @ 0x000000807a78f028
+[Patina INFO] EBS completed successfully.
